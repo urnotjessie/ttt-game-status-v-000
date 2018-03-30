@@ -1,7 +1,7 @@
 def won?(board)
     if [0, 1, 2, 3, 4, 5, 6, 7, 8].none? { |index| position_taken?(board, index) }
         return false
-    else WIN_COMBINATIONS.each do |win_combination|
+    else WIN_COMBINATIONS.detect do |win_combination|
             win_index_1 = win_combination[0]
             win_index_2 = win_combination[1]
             win_index_3 = win_combination[2]
@@ -10,14 +10,10 @@ def won?(board)
             position_2 = board[win_index_2]
             position_3 = board[win_index_3]
 
-            if position_1 == "X" && position_2 == "X" && position_3 == "X"
-                return win_combination
-                break
+            position_1 == "X" && position_2 == "X" && position_3 == "X"
+
             # elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
             #     return win_combination
-            else
-                false
-            end
         end
     end
 end
