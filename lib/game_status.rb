@@ -12,6 +12,8 @@ def won?(board)
     end
 end
 
+def full?(board)
+    board.all { |element| element == "X" || element == "O" }
 
 
 # Helper Method
