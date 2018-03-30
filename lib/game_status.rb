@@ -23,6 +23,8 @@ def draw?(board)
         return false
     else
         return true
+    end
+end
 
 
 
