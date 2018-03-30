@@ -38,6 +38,9 @@ def winner(board)
         return board[winner_indes[0]]
     else
         return false
+    end
+end
+
 
 
 
