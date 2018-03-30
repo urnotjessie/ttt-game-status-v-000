@@ -17,6 +17,12 @@ def full?(board)
 end
 
 def draw?(board)
+    if won?(board) =! nil
+        return false
+    elsif !full?(board)
+        return false
+    else
+        return true
 
 
 
